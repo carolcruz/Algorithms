@@ -55,26 +55,25 @@ void conquer(char array[], int low, int mid, int high){
 	}
 }
 
-void printArray(char A[], int size)
+void print(char array[], int lenght)
 {
     int i;
-    for (i=0; i < size; i++)
-        printf("%c ", A[i]);
+    for (i=0; i < lenght; i++)
+        printf("%c ", array[i]);
     printf("\n");
 }
- 
-/* Driver program to test above functions */
+
 int main()
 {
-    char arr[] = {'a', 'd', 'b', 'c', 'e'};
-    int arr_size = sizeof(arr)/sizeof(arr[0]);
+    char array[] = {'a', 'd', 'b', 'c', 'e'};
+    int lenght = sizeof(array)/sizeof(array[0]);
  
-    printf("Given array is \n");
-    printArray(arr, arr_size);
+    printf("Given:\n");
+    print(array, lenght);
  
-    divide(arr, 0, arr_size - 1);
+    divide(array, 0, lenght-1);
  
-    printf("\nSorted array is \n");
-    printArray(arr, arr_size);
+    printf("\nSorted:\n");
+    print(array, lenght);
     return 0;
 }
